@@ -1,0 +1,957 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(3, 3, 3);
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(17, 17, 17);
+}
+::-webkit-scrollbar-track{
+    width: 10px;
+    background-color: rgb(12, 133, 180);
+    border-radius: 50px;
+}
+header{
+    height: 80px;
+    width: 70%;
+    position: fixed;
+    top: 20px;
+    left: 15%;
+/*    background-color: rgb(12, 12, 12);*/
+    border-radius: 50px;
+/*    border: 2px solid rgb(12, 133, 180);*/
+    z-index: 111;
+}
+header h1{
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 4%;
+}
+header nav ul{
+    list-style: none;
+    width: 60%;
+    position: absolute;
+    right: 10%;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.4s;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 20px;
+}
+header nav ul li:hover{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgb(12, 133, 180);
+    border-radius: 20px;
+}
+.HMImg{
+    height: 100vh;
+    width: 100%;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#homeSec{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: block;
+}
+.h2Spn{
+    color: rgb(12, 133, 180);
+    animation: k10 infinite 2s;
+}
+/*
+@keyframes k10 {
+    0%{
+        text-shadow: 0px 0px 0px rgb(12, 133, 180);
+    }
+    50%{
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+    100%{
+        text-shadow: 0px 0px 0px rgb(12, 133, 180);
+    }
+}
+*/
+#homeSec h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 200px;
+    color: white;
+ /*   text-shadow: 2px 2px 40px white;*/
+}
+#homeSec h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    color: white;
+ /*   text-shadow: 2px 2px 40px white;*/
+}
+#homeSec p{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    color: white;
+}
+#coueses2{
+    color: rgb(12, 133, 180);
+    border-bottom: 2px solid rgb(12, 133, 180);
+    cursor: pointer;
+}
+#homeSec h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    color: white;
+}
+#tradingView{
+    color: rgb(12, 133, 180);
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+    font-size: 22px;
+    text-align: center;
+}
+#homeSec h4{
+    text-align: center;
+    margin-top: 6px;
+}
+footer{
+    height: 80px;
+    width: 70%;
+    position: fixed;
+    bottom: 20px;
+    left: 15%;
+/*    background-color: rgb(12, 12, 12);*/
+    border-radius: 50px;
+/*    border: 2px solid rgb(12, 133, 180);*/
+    z-index: 999;
+}
+footer h1{
+    text-align: center;
+    margin-top: 18px;
+    color: white;
+}
+
+#aboutSec{
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: none;
+}
+.aboutCont{
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 46%;
+    top: 10px;
+}
+.aboutContImg{
+    height: 60px;
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.aboutContImg:hover{
+    transform: rotate(360deg);
+    border: 2px solid rgb(12, 133, 180);
+}
+#aboutSec h1{
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    font-size: 40px;
+}
+#aboutSec h3{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 24px;
+}
+#aboutSec h2{
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    font-size: 30px;
+}
+#coursesSec{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: none;
+}
+#coursesSec h1{
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    font-size: 40px;
+}
+#coursesSec h3{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 24px;
+}
+#coursesSec h2{
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    font-size: 30px;
+}
+#coursesSec ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+    left: 20%;
+    top: 20px;
+}
+#coursesSec ul li{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#coursesSec ul li:hover{
+    color: rgb(12, 133, 180);
+}
+.vdioes{
+    background-color: rgb(12, 133, 180);
+    height: 280px;
+    width: 25%;
+    border-radius: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    left: 37.5%;
+    top: 10px;
+}
+.vdioes:hover{
+    border: 2px solid rgb(12, 133, 180);
+}
+#backBTN{
+    height: 36px;
+    width: 20%;
+    position: absolute;
+    font-size: 22px;
+    background-color: rgb(12, 133, 180);
+    border: 2px solid rgb(12, 133, 180);
+    border-radius: 50px;
+    transition: 0.4s;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    left: 40%;
+    top: 820px;
+}
+#backBTN:hover{
+    color: rgb(12, 133, 180);
+    background-color: white;
+    letter-spacing: 3.2px;
+}
+#cryptoDV,#stocksDV,#forexDV,#futuresDV,#TechnicalAnalysisDV,#TemporalAnalysisDV,#ClassicAnalysisDV{
+    display: none;
+}
+#newsSec{
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: none;
+}
+#newsSec h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    height: 600px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    top: 40px;
+}
+.box{
+    width: 47%;
+    border: 2px solid rgb(12, 133, 180);
+    border-radius: 10px;
+    height: 48%;
+    background-color: rgb(12, 133, 180);
+    overflow: hidden;
+    cursor: pointer;
+}
+.boxImg{
+    height: 70%;
+    width: 100%;
+}
+.title{
+    text-align: center;
+}
+.paragraphe{
+    text-align: center;
+    margin-top: 10px;
+}
+#menuBtn,#closeBtn,#secUl{
+    display: none;
+}
+
+.FSTDV{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(12, 12, 12);
+    position: relative;
+    animation: kk4 5.1s steps(6);
+    top: -999999px;
+}
+@keyframes kk4 {
+    0%{
+        display: block;
+        top: 0px;
+        z-index: 999;
+    }
+    20%{
+        display: block;
+        top: 0px;
+        z-index: 999;
+    }
+    40%{
+        display: block;
+        top: 0px;
+        z-index: 999;
+    }
+    60%{
+        display: block;
+        top: 0px;
+        z-index: 999;
+    }
+    80%{
+        display: block;
+        top: 0px;
+        z-index: 999;
+    }
+    100%{
+        display: none;
+        top: -100000px;
+        
+    }
+}
+.allTxt{
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    position: relative;
+    left: 32.5%;
+    top: 40%;
+    height: 20%;
+    overflow: hidden;
+}
+.allTxt h1{
+    font-size: 140px;
+}
+.Z1{
+    animation: k1 5s;
+}
+.Z2{
+    animation: k2 5s;
+}
+.Z3{
+    animation: k3 5s;
+}
+@keyframes k1 {
+    0%{
+        color: rgb(12, 12, 12);
+    }
+    20%{
+        color: rgb(12, 133, 180);
+    }
+    40%{
+        color: rgb(12, 133, 180);
+    }
+    60%{
+        color: rgb(12, 133, 180);
+    }
+    80%{
+        color: rgb(12, 133, 180);
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+    100%{
+        color: rgb(12, 133, 180);
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+}
+@keyframes k2 {
+    0%{
+        color: rgb(12, 12, 12);
+    }
+    20%{
+        color: rgb(12, 12, 12);
+    }
+    40%{
+        color: rgb(12, 133, 180);
+    }
+    60%{
+        color: rgb(12, 133, 180);
+    }
+    80%{
+        color: rgb(12, 133, 180);
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+    100%{
+        color: rgb(12, 133, 180);
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+}
+@keyframes k3 {
+    0%{
+        color: rgb(12, 12, 12);
+    }
+    20%{
+        color: rgb(12, 12, 12);
+    }
+    40%{
+        color: rgb(12, 12, 12);
+    }
+    60%{
+        color: rgb(12, 133, 180);
+    }
+    80%{
+        color: rgb(12, 133, 180);
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+    100%{
+        color: rgb(12, 133, 180);
+        text-shadow: 2px 2px 20px rgb(12, 133, 180);
+    }
+}
+
+
+
+@media only screen and (min-width :1440px){
+    #menuBtn,#closeBtn,#secUl{
+        display: none;
+    }
+}
+
+@media only screen and (min-width :1024px) and (max-width :1440px){
+    #coursesSec ul{
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #coursesSec ul li{
+        width: 25%;
+        height: 36px;
+    }
+    .vdioes{
+        height: 200px;
+    }
+    .box{
+        height: 280px;
+    }
+    .boxes{
+        height: 580px;
+    }
+    .boxImg{
+        height: 60%;
+    }
+}
+
+@media only screen and (min-width :768px) and (max-width :1024px){
+    #coursesSec ul{
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+        left: 5%;
+    }
+    #coursesSec ul li{
+        width: 25%;
+        height: 36px;
+    }
+    .vdioes{
+        height: 160px;
+        width: 34%;
+        left: 33%;
+    }
+    #backBTN{
+        position: absolute;
+        left: 40%;
+        top: 760px;
+    }
+    .box{
+        height: 240px;
+    }
+    .boxes{
+        height: 520px;
+        width: 90%;
+        left: 5%;
+    }
+    .boxImg{
+        height: 60%;
+    }
+    #menuBtn,#closeBtn,#secUl{
+        display: none;
+    }
+    #closeBtn{
+        display: none;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+    }
+    #headerH1{
+        text-align: center;
+        position: relative;
+    }
+    header nav ul{
+        display: none;
+    }
+    #menuBtn{
+        display: block;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        position: absolute;
+        left: 4px;
+        top: 3px;
+    }
+    #secUl{
+        display: none;
+        height: 180px;
+        width: 150px;
+        border: 2px solid rgb(12, 133, 180);
+        border-radius: 10px;
+        background-color: rgb(12, 12, 12);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        align-items: center;
+        align-content: space-around;
+    }
+    #secUl li{
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+        position: relative;
+        left: -16px;
+        text-align: center;
+        top: 00px;
+        margin: 20px;
+    }
+    #aboutH3{
+        width: 80%;
+        position: relative;
+        left: 10%;
+    }
+    .FSTDV{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: rgb(12, 12, 12);
+        position: relative;
+        animation: kk4 5.1s steps(6);
+        top: -999999px;
+    }
+    .allTxt{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: max-content;
+        top: 120px;
+        left: 30%;
+        width: 40%;
+    }
+    .allTxt h1{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width :425px) and (max-width :768px){
+    #coursesSec ul{
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+        left: 5%;
+    }
+    #coursesSec ul li{
+        width: 25%;
+        height: 36px;
+    }
+    .vdioes{
+        height: 160px;
+        width: 50%;
+        left: 25%;
+    }
+    #backBTN{
+        position: absolute;
+        left: 35%;
+        top: 760px;
+        width: 30%;
+    }
+    .box{
+        height: 240px;
+    }
+    .boxes{
+        height: 520px;
+        width: 90%;
+        left: 5%;
+    }
+    .boxImg{
+        height: 57%;
+    }
+    #menuBtn,#closeBtn,#secUl{
+        display: none;
+    }
+    #closeBtn{
+        display: none;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+    }
+    #headerH1{
+        text-align: center;
+        position: relative;
+    }
+    header nav ul{
+        display: none;
+    }
+    #menuBtn{
+        display: block;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        position: absolute;
+        left: 4px;
+        top: 3px;
+    }
+    #secUl{
+        display: none;
+        height: 180px;
+        width: 150px;
+        border: 2px solid rgb(12, 133, 180);
+        border-radius: 10px;
+        background-color: rgb(12, 12, 12);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+        position: absolute;
+        top: 90px;
+        left: 00px;
+        align-items: center;
+        align-content: space-around;
+    }
+    #secUl li{
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+        position: relative;
+        left: -16px;
+        text-align: center;
+        top: 00px;
+        margin: 20px;
+    }
+    #aboutH3{
+        width: 80%;
+        position: relative;
+        left: 10%;
+    }
+    footer h1{
+        font-size: 24px;
+    }
+    .aboutCont{
+        width: 20%;
+        left: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .aboutContImg{
+        height: 50px;
+        width: 50px;
+    }
+    .title{
+        font-size: 18px
+    }
+    .paragraphe{
+        font-size: 14px;
+    }
+    #newsSec h1,#coursesSec h1,#aboutSec h1,#homeSec h1{
+        font-size: 30px;
+    }
+    #coursesSec h2,#homeSec h2{
+        font-size: 26px;
+    }
+    #coursesSec h3,#aboutSec h3,#homeSec h3{
+        font-size: 24px;
+    }
+    #homeSec p{
+        font-size: 20px;
+    }
+    .FSTDV{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: rgb(12, 12, 12);
+        position: relative;
+        animation: kk4 5.1s steps(6);
+        top: -999999px;
+    }
+    .allTxt{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: max-content;
+        top: 120px;
+        left: 30%;
+        width: 40%;
+    }
+    .allTxt h1{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width :250px) and (max-width :425px){
+    #coursesSec ul{
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+        left: 5%;
+    }
+    #coursesSec ul li{
+        width: 25%;
+        height: 36px;
+    }
+    .vdioes{
+        height: 160px;
+        width: 80%;
+        left: 10%;
+    }
+    #backBTN{
+        position: absolute;
+        left: 25%;
+        top: 760px;
+        width: 50%;
+    }
+    .box{
+        height: 240px;
+        width: 80%;
+        left: 10%;
+        position: relative;
+        margin-top: 20px;
+    }
+    .boxes{
+        height: 1100px;
+        width: 90%;
+        left: 5%;
+        margin-bottom: 160px;
+    }
+    .boxImg{
+        height: 57%;
+    }
+    #menuBtn,#closeBtn,#secUl{
+        display: none;
+    }
+    #closeBtn{
+        display: none;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+    }
+    #headerH1{
+        text-align: center;
+        position: relative;
+        font-size: 20px;
+        top: 16px;
+    }
+    header{
+        height: 60px;
+    }
+    header nav ul{
+        display: none;
+    }
+    #menuBtn{
+        display: block;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        left: 4px;
+        top: 3px;
+    }
+    #secUl{
+        display: none;
+        height: 140px;
+        width: 100px;
+        border: 2px solid rgb(12, 133, 180);
+        border-radius: 10px;
+        background-color: rgb(12, 12, 12);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+        position: absolute;
+        top: 70px;
+        left: 00px;
+        align-items: center;
+        align-content: space-around;
+    }
+    #secUl li{
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+        position: relative;
+        left: -08px;
+        text-align: center;
+        top: 0px;
+        margin: 10px;
+    }
+    #aboutH3{
+        width: 80%;
+        position: relative;
+        left: 10%;
+    }
+    footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    footer h1{
+        font-size: 18px;
+    }
+    .aboutCont{
+        width: 25%;
+        left: 37.5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .aboutContImg{
+        height: 40px;
+        width: 40px;
+    }
+    .title{
+        font-size: 18px
+    }
+    .paragraphe{
+        font-size: 14px;
+    }
+    #newsSec h1,#coursesSec h1,#aboutSec h1,#homeSec h1{
+        font-size: 30px;
+    }
+    #homeSec h2,#aboutSec h2{
+        font-size: 26px;
+    }
+    #coursesSec h2{
+        font-size: 22px;
+    }
+    #coursesSec h3,#aboutSec h3,#homeSec h3{
+        font-size: 22px;
+    }
+    #homeSec p{
+        font-size: 20px;
+    }
+    #homeSec,#aboutSec{
+        top: 40px;
+    }
+    #newsSec{
+        top: 100px;
+    }
+    .FSTDV{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: rgb(12, 12, 12);
+        position: relative;
+        animation: kk4 5.1s steps(6);
+        top: -999999px;
+    }
+    .allTxt{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: max-content;
+        top: 120px;
+        left: 30%;
+        width: 40%;
+    }
+    .allTxt h1{
+        width: 100%;
+        text-align: center;
+    }
+}
